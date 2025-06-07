@@ -1,0 +1,125 @@
+:root {
+    /* é um pseudo-seletor que identifica o elemento raiz de um documento, significa o elemento <html>. É utilizado para definir variáveis CSS globais ou para estilizar o elemento raiz diretamente. 
+*/
+    --bege: #d8c3a5;
+    --offwhite: #f9f6f1;
+    --text: #4b4b4b;
+    /*define a cor do texto da pagina*/
+    --hover: #c5ab8e;
+    /*é uma pseudo-classe que permite aplicar estilos a um elemento quando o cursor do mouse passa por cima dele*/
+  }
+  
+  body {
+    /*estiliza dentro da tag body no html*/
+    margin: 0;
+    /*espaço transparente ao redor dos elementos, fora de suas bordas e conteúdo*/
+    font-family: 'Arial', sans-serif;
+    /*estilo da letra*/
+    background-color: var(--offwhite);
+    /*cor de fundo*/
+    color: var(--text);
+    /*a cor do texto de um elemento será definida pelo valor da variável CSS --text. A função var é usada para acessar e utilizar o valor de variáveis CSS personalizadas. */
+  }
+  
+  header {
+    /*estiliza dentro da tag header no html*/
+    background-color: var(--bege);
+    /*define cor de fundo*/
+    padding: 2rem 1rem;
+    /*espaçamento interno de um elemento, a distância entre o conteúdo do elemento e suas bordas*/
+    text-align: center;
+    /*alinha o texto no centro da pagina*/
+  }
+  
+  header h1 {
+    /*estiliza dentro da tag header o titulo definido como h1*/
+    margin: 0;
+    font-size: 2.2rem;
+    /*define o tamanho da fonte*/
+  }
+  
+  header p {
+    /*estiliza dentro da tag header o paragrafo p*/
+    margin-top: 0.5rem;
+    /*espaço transparente ao redor dos elementos, fora de suas bordas e conteúdo somente na parte superior*/
+    font-size: 1rem;
+  }
+  
+  .container {
+    /*estiliza onde estiver sendo usada a class container*/
+    max-width: 1200px;
+    /*define a largura máxima que um elemento pode ter*/
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    /* define que os elementos container serão organizados em linhas e colunas, criando uma estrutura de grade para o layout.*/
+    gap: 2rem;
+    /* define o espaçamento entre linhas e colunas em layouts Flexbox, Grid e multicolunas*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /*define uma grade com colunas que se ajustam automaticamente para caber no espaço disponível*/
+  }
+  
+  .product-card {
+    /*estiliza o que estive na class product-card*/
+    background-color: white;
+    border-radius: 12px;
+    /*permite que os cantos fiquem arredondados*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    /*adiciona efeitos de sombra a um elemento, criando a ilusão de que a caixa está projetada ou tem profundidade.*/
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+    /*define uma transição suave para as propriedades de transformação*/
+  }
+  
+  .product-card:hover {
+    /*estilieza o que estiver na class product-card:hover*/
+    transform: translateY(-5px);
+  }
+  
+  .product-card img {
+    width: 100%;
+    /*define a largura (tamanho horizontal) de um elemento HTML. */
+    height: 200px;
+    /*define a altura (tamanho vertical) de um elemento HTML*/
+    object-fit: cover;
+    /*define como uma imagem, vídeo ou outro conteúdo substituto deve ser redimensionado para caber dentro do seu contêiner*/
+    border-radius: 8px;
+  }
+  
+  .product-card h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .product-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    /*espaço transparente ao redor dos elementos, fora de suas bordas e conteúdo, somente na parte inferior */
+  }
+  
+  .buy-button {
+    background-color: var(--bege);
+    color: white;
+    /*propriedade que define a cor do texto de um elemento HTML*/
+    border: none;
+    /*é uma propriedade abreviada que permite definir a espessura, o estilo e a cor de uma borda ao mesmo tempo para todos os lados de um elemento.*/
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    /* é uma propriedade que define o cursor do mouse como uma mão, indicando ao usuário que o elemento é clicável.*/
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-button:hover {
+    background-color: var(--hover);
+  }
+  
+  footer {
+    /*estiliza o que estiver dentro da tag footer*/
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #999;
+    background-color: var(--offwhite);
+  }
